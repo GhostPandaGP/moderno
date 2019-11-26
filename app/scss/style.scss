@@ -1,0 +1,13 @@
+html{
+    box-sizing: border-box;
+}
+*,
+*::after,
+*::before{
+    box-sizing: inherit;
+}
+body{
+    background-color: tomato;
+    display: flex;
+    transition: all 3s;
+}
