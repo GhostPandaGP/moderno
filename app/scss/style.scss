@@ -385,3 +385,33 @@
     background-color: $green;
 }
 // end author
+
+// start tutorial
+.tutorial{
+    padding: 70px 0px 120px;
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__item{
+        max-width: 370px;
+        width: 100%;
+    }
+}
+.tutorial__item{
+    &-images{
+        min-height: 270px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    &-title{
+        padding: 30px 10px;
+        background-color: #f8f8f8;
+        text-align: center;
+        font-size: 24px;
+        color: $bg;
+        @include f700;
+    }
+}
+// end tutorial
