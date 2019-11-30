@@ -77,13 +77,13 @@
     &-title{
         font-size: 48px;
         line-height: 72px;
-        font-weight: 700;
+        @include f700;
         margin-bottom: 10px;
     }
     &-text{
         font-size: 20px;
         line-height: 30px;
-        font-weight: 500;
+        @include f500;
         margin-bottom: 50px;
     }
     &-form{
@@ -99,14 +99,14 @@
             height: 56px;
             border: 1px solid transparent;
             font-size: 14px;
-            font-weight: 500;
+            @include f500;
             // outline: none;
             // &:focus{
             //     border: 1px solid $bg;
             // }
             &::placeholder{
                 color: #90a4ae;
-                font-weight: 500;
+                @include f500;
             } // чтобы убрать outline и при этом позаботиться о доступности
         }
         button{
@@ -174,7 +174,7 @@
         align-items: center;
         padding: 10px 30px;
         min-height: 90px;
-        font-weight: 500;
+        @include f500;
         border-bottom: 1px solid #e7ecf2;
     }
     &-name{
@@ -193,7 +193,7 @@
     &-price{
         font-size: 20px;
         color: $bg;
-        font-weight: 700;
+        @include f700;
     }
     &-info{
         display: flex;
@@ -218,7 +218,7 @@
         }
         span{
             font-size: 14px;
-            font-weight: 500;
+            @include f500;
         }
     }
     &-star{
@@ -275,3 +275,74 @@
     }
 }
 // end product-slider
+
+// start advantages
+.advantages{
+    background-color: $bg;
+    padding: 110px 0;
+}
+.advantages__title{
+    color: #fff;
+    margin-bottom: 70px;
+}
+.advantages__inner{
+    display: flex;
+    justify-content: space-between;
+}
+.advantages__item{
+    max-width: 370px;
+    padding: 0 15px;
+    text-align: center;
+    &:hover{
+        .advantages__item-images{
+            background-color: $green;
+            svg{
+                fill: #fff;
+            }
+        }
+        .advantages__item-title{
+            color: $green;
+        }
+    }
+    &-images{
+        width: 114px;
+        height: 114px;
+        background-color: #fff;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto 30px;
+        transition: all .3s;
+        svg{
+            transition: all .3s;
+        }
+    }
+    &-title{
+        font-size: 24px;
+        @include f500;
+        color: #fff;
+        margin-bottom: 25px;
+        transition: all .3s;
+    }
+    &-text{
+        font-size: 15px;
+        color: #b0bec5;
+    }
+}
+.iconsvg-1{
+    svg{
+        width: 65px;
+    }
+}
+.iconsvg-2{
+    svg{
+        width: 75px;
+    }
+}
+.iconsvg-3{
+    svg{
+        width: 75px;
+    }
+}
+// end advantages
