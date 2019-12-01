@@ -6,6 +6,10 @@ html{
 *::before{
     box-sizing: inherit;
 }
+html,
+body {
+	height: 100%;
+}
 body{
     font-family: "Roboto-Regular", sans-serif;
     font-size: 15px;
@@ -23,6 +27,19 @@ a{
     text-decoration: none;
     color: $text;
 }
+// start прижать footer к низу страницы
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+}
+.content {
+	flex: 1 0 auto;
+}
+.footer {
+	flex: 0 0 auto;
+}
+// end прижать footer к низу страницы
 .container{
     max-width: 1200px;
     padding: 0px 15px;
@@ -38,6 +55,9 @@ a{
         padding: 0 15px;
     }
 }
+.page-content{
+    background-color: $gray;
+}
 .title{
     color: $bg;
     font-size: 36px;
@@ -50,4 +70,32 @@ a{
 .rate-star{
     display: inline-block;
     margin-right: 13px;
+}
+.breadcrumbs{
+    &__inner{
+        padding: 45px 0px 40px;
+    }
+    &__list{
+        li{
+            display: inline-block;
+            position: relative;
+            a{
+                color: #b0bec5;
+            }
+            &:last-child{
+                a{
+                    color: $bg;
+                }
+            }
+            & + li{
+                padding-left: 24px;
+                &::before{
+                    content: '-';
+                    position: absolute;
+                    left: 8px;
+                    color: $green;
+                }
+            }
+        }
+    }
 }
